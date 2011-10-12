@@ -14,6 +14,8 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
+"syntastic setup
+"SyntasticEnable javascript
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
@@ -84,6 +86,7 @@ nmap <leader>; :buffers<CR>
 nmap <leader>s :bufdo set spell!<CR>
 nmap <leader>w :set linebreak<CR>:set wrap<CR>:set spell<CR>
 nmap <leader>e :set nowrap<CR>:set nospell<CR> 
+nmap <leader>o :NERDTreeToggle<CR>
 nmap <F6> :w<CR>:! ruby -w %<CR>
 
 
