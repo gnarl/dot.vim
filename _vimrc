@@ -92,6 +92,6 @@ nmap <F6> :w<CR>:! ruby -w %<CR>
 
 colorscheme murphy
 "set guifont=Monaco:h14
-set guifont=Menlo:h14
+set guifont=Source_Code_Pro:h14
 
 
