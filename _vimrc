@@ -57,7 +57,7 @@ set wildmenu             " make tab completion for files/buffers act like bash
 set wildmode=list:full   " show a list when pressing tab and complete first full match
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                " change the terminal's title
-
+set nofoldenable         " disable folding
 
 set guicursor+=a:blinkon0 " Disable blinking for the love of sweden
 
