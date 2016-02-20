@@ -74,6 +74,9 @@ vnoremap / /\v
 ":q
 nnoremap <leader>q :q<CR>
 
+"macro to wrap a line @ 80 char
+let @l = '080lbi'
+
 " clear search highlighting
 nnoremap <leader><space> :noh<cr>
 
@@ -92,6 +95,4 @@ nmap <F6> :w<CR>:! ruby -w %<CR>
 
 colorscheme murphy
 "set guifont=Monaco:h14
-set guifont=Source_Code_Pro:h14
-
-
+set guifont=Source_Code_Pro:h12
