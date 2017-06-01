@@ -1,0 +1,68 @@
+startup_message off
+defscrollback 10000
+sessionname stack
+hardstatus alwayslastline '%{= .} %-Lw%{= .}%> %n%f %t*%{= .}%+Lw%< %-=%{g}(%{d}%H/%l%{g})'
+setenv PROMPT_COMMAND /bin/true
+ 
+# Nova Logs
+screen -t nova-api bash
+stuff "journalctl -a -f -o short-precise --unit devstack@n-api.service^M"
+screen -t nova-conductor bash
+stuff "journalctl -a -f -o short-precise --unit devstack@n-cond.service^M"
+screen -t nova-cpu bash
+stuff "journalctl -a -f -o short-precise --unit devstack@n-cpu.service^M"
+screen -t nova-scheduler bash
+stuff "journalctl -a -f -o short-precise --unit devstack@n-sch.service^M"
+screen -t nova-placement bash
+stuff "journalctl -a -f -o short-precise --unit devstack@placement-api.service^M"
+ 
+# Glance Logs
+screen -t glance-api bash
+stuff "journalctl -a -f -o short-precise --unit devstack@g-api.service^M"
+screen -t glance-registry bash
+stuff "journalctl -a -f -o short-precise --unit devstack@g-reg.service^M"
+screen -t cinder-volume bash
+stuff "journalctl -a -f -o short-precise --unit devstack@c-vol.service^M"
+ 
+# Cinder Logs
+screen -t cinder-api bash
+stuff "journalctl -a -f -o short-precise --unit devstack@c-api.service^M"
+screen -t cinder-scheduler bash
+stuff "journalctl -a -f -o short-precise --unit devstack@c-sch.service^M"
+screen -t cinder-volume bash
+stuff "journalctl -a -f -o short-precise --unit devstack@c-vol.service^M"
+ 
+# Manila Logs
+screen -t manila-api bash
+stuff "journalctl -a -f -o short-precise --unit devstack@m-api.service^M"
+screen -t manila-scheduler bash
+stuff "journalctl -a -f -o short-precise --unit devstack@m-sch.service^M"
+screen -t manila-share bash
+stuff "journalctl -a -f -o short-precise --unit devstack@m-shr.service^M"
+screen -t manila-data bash
+stuff "journalctl -a -f -o short-precise --unit devstack@m-dat.service^M"
+ 
+# etcd Logs
+screen -t etcd bash
+stuff "journalctl -a -f -o short-precise --unit devstack@etcd.service^M"
+ 
+# Keystone Logs
+screen -t keystone bash
+stuff "journalctl -a -f -o short-precise --unit devstack@keystone.service^M"
+ 
+# Neutron Logs
+screen -t neutron-service bash
+stuff "journalctl -a -f -o short-precise --unit devstack@q-svc.service^M"
+screen -t neutron-agent bash
+stuff "journalctl -a -f -o short-precise --unit devstack@q-agt.service^M"
+screen -t neutron-metadata bash
+stuff "journalctl -a -f -o short-precise --unit devstack@q-meta.service^M"
+screen -t neutron-l3 bash
+stuff "journalctl -a -f -o short-precise --unit devstack@q-l3.service^M"
+ 
+# Syslog
+screen -t messages bash
+stuff "cd /var/log && multitail /var/log/messages^M"
+ 
+# Bash
+screen -t shell bash
