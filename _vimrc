@@ -80,6 +80,9 @@ let @l = '080lbi'
 " clear search highlighting
 nnoremap <leader><space> :noh<cr>
 
+" create TODO file for today
+nnoremap <expr> <Leader>t ":e ~/notes/TODO/" . strftime('%F') . ".todo.md"
+
 nmap <leader>c :tabprevious<CR>
 nmap <leader>v :tabnext<CR>
 nmap <leader>n :bn<CR>
