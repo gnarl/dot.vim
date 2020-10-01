@@ -1,0 +1,20 @@
+#! /usr/bin/env ruby -w
+STDOUT.sync = true
+seconds = ARGV[0].to_i * 60
+msg = "woot"
+if ARGV[1]
+  msg = ARGV[1]
+end
+i = 0
+print('0 ')
+while i < seconds
+    i += 1
+    print(".")
+    if i % 60 == 0
+      print("\n")
+      print((i / 60).to_s + ' ')
+    end
+    sleep 1
+end
+message = "\"" + Time.now.strftime("%H:%M ") + "Pomodoro Completed!\""
+system "terminal-notifier -message #{message} -sound default -title \"#{msg}\""
