@@ -95,7 +95,11 @@ nmap <leader>e :set nowrap<CR>:set nospell<CR>
 nmap <leader>o :NERDTreeToggle<CR>
 nmap <F6> :w<CR>:! ruby -w %<CR>
 
-
+" set t_Co=256
+set background=dark
 colorscheme murphy
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+
 "set guifont=Monaco:h14
 set guifont=Source_Code_Pro:h12
