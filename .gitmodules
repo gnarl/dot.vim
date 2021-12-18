@@ -19,3 +19,6 @@
 [submodule "vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule "vim-log-highlighting"]
+	path = bundle/vim-log-highlighting
+	url = https://github.com/MTDL9/vim-log-highlighting.git 
