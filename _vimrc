@@ -89,18 +89,12 @@ nmap <leader>s :bufdo set spell!<CR>
 nmap <leader>w :set linebreak<CR>:set wrap<CR>:set spell<CR>
 nmap <leader>e :set nowrap<CR>:set nospell<CR> 
 nmap <leader>o :NERDTreeToggle<CR>
-nmap <F6> :w<CR>:! ruby -w %<CR>
 
 colorscheme gruvbox 
 "colorscheme molokai 
 "colorscheme murphy
 "set guifont=Monaco:h14
 set guifont=Source_Code_Pro:h12
-
-let g:pymode_lint_options_pep8 = {'max_line_length': 120}
-let g:pymode_options_max_line_length = 120
-let g:pymode_virtualenv = 1
-
 
 " run go imports on file save
 let g:go_fmt_command = "goimports"
