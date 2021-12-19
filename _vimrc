@@ -10,12 +10,8 @@ set nocompatible
 
 "Use pathogen to easily include all plugins under ~/.vim/bundle
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 filetype plugin indent on
-
-"syntastic setup
-"SyntasticEnable javascript
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
@@ -95,11 +91,32 @@ nmap <leader>e :set nowrap<CR>:set nospell<CR>
 nmap <leader>o :NERDTreeToggle<CR>
 nmap <F6> :w<CR>:! ruby -w %<CR>
 
-" set t_Co=256
-set background=dark
-colorscheme murphy
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
-
+colorscheme gruvbox 
+"colorscheme molokai 
+"colorscheme murphy
 "set guifont=Monaco:h14
 set guifont=Source_Code_Pro:h12
+
+let g:pymode_lint_options_pep8 = {'max_line_length': 120}
+let g:pymode_options_max_line_length = 120
+let g:pymode_virtualenv = 1
+
+
+" run go imports on file save
+let g:go_fmt_command = "goimports"
+
+" Get signature/type infor for object under cursor
+let g:go_auto_type_info = 1
+
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+
+
+
