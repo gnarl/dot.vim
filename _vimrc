@@ -90,11 +90,12 @@ nmap <leader>w :set linebreak<CR>:set wrap<CR>:set spell<CR>
 nmap <leader>e :set nowrap<CR>:set nospell<CR> 
 nmap <leader>o :NERDTreeToggle<CR>
 
-colorscheme gruvbox 
-"colorscheme molokai 
 "colorscheme murphy
+colorscheme gruvbox 
+
 "set guifont=Monaco:h14
-set guifont=Source_Code_Pro:h12
+"set guifont=Source_Code_Pro:h12
+set guifont=FiraCodeNerdFontComplete-Regular:h12
 
 " run go imports on file save
 let g:go_fmt_command = "goimports"
@@ -112,5 +113,11 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 
+
+" vim-airline config
+"let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='luna'
 
 
