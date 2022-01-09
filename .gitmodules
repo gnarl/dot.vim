@@ -7,12 +7,21 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim-log-highlighting"]
 	path = bundle/vim-log-highlighting
 	url = https://github.com/MTDL9/vim-log-highlighting.git 
+[submodule "pack/dist/start/vim-airline"]
+	path = pack/dist/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "pack/dist/start/vim-airline-themes"]
+	path = pack/dist/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "pack/dist/start/vim-fugitive"]
+	path = pack/dist/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/plugins/start/vim-go"]
+	path = pack/plugins/start/vim-go
+	url = https://github.com/fatih/vim-go.git
