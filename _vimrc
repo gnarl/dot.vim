@@ -5,7 +5,7 @@ if v:progname =~? "evim"
 endif
 
 " Use Vim settings, rather then Vi settings (much better!).
-" nocompatible must be set first 
+" nocompatible must be set first
 set nocompatible
 
 "Use pathogen to easily include all plugins under ~/.vim/bundle
@@ -37,13 +37,13 @@ set noswapfile
 set history=50           " keep 50 lines of command line history
 set ruler                " show the cursor position all the time
 set showcmd              " display incomplete commands
-set incsearch            " show matches as you type 
+set incsearch            " show matches as you type
 set mouse=a              " enable using mouse in term if supported
 
-set hidden               " hide buffers instead of closing them 
+set hidden               " hide buffers instead of closing them
 set tabstop=2
 set shiftwidth=2
-set expandtab            " use spaces instead of \t 
+set expandtab            " use spaces instead of \t
 set visualbell t_vb=""
 set nowrap
 set showmatch            " show matching parens
@@ -87,15 +87,16 @@ nmap <leader>k :bd<CR>
 nmap <leader>; :buffers<CR>
 nmap <leader>s :bufdo set spell!<CR>
 nmap <leader>w :set linebreak<CR>:set wrap<CR>:set spell<CR>
-nmap <leader>e :set nowrap<CR>:set nospell<CR> 
+nmap <leader>e :set nowrap<CR>:set nospell<CR>
 nmap <leader>o :NERDTreeToggle<CR>
 
 "colorscheme murphy
-colorscheme gruvbox 
+colorscheme gruvbox
 
 "set guifont=Monaco:h14
 "set guifont=Source_Code_Pro:h12
 set guifont=FiraCodeNerdFontComplete-Regular:h12
+set bg=dark
 
 " run go imports on file save
 let g:go_fmt_command = "goimports"
@@ -119,5 +120,3 @@ let g:go_highlight_generate_tags = 1
 let g:airline_symbols_ascii = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='luna'
-
-
